@@ -15,17 +15,9 @@ _O repositório está organizado da seguite maneira:_
 
 ## Galeria ------------------------- VER !!
 
-| Métodos                      | Resultado   |
-| ---------------------------- | ----------- |
-| GET (Filmes)                 | ![Get Filmes](doc/images/image4.png)       |
-| GET (Filmes{id})             | ![Get Filmes_id](doc/images/image5.png)       |
-| GET (Genero)                 | ![Get genero](doc/images/image6.png)       |
-| GET (Genero{id})             | ![Get genero_id](doc/images/image13.png)       |
-| GET (User)                   | ![Get user](doc/images/image14.png)       |
-| GET (User{id}{first_name})   | ![Get user_id](doc/images/image7.png)       |
-| GET (Favoritos{id})          | ![Get Fav_id](doc/images/image8.png)       |
-| POST (Favoritos{id})         | ![Post Fav_id](doc/images/image11.png)       |
-| Delete (Favoritos{id})       | ![Delete Fav_id](doc/images/image12.png)       |
+![Recursos1](doc/images/image4.png)
+![Recursos2](doc/images/image4.png)
+![Recursos3](doc/images/image4.png)
 
 ## Tecnologias 
 
