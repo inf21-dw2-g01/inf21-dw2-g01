@@ -1,0 +1,1119 @@
+{
+	"info": {
+		"_postman_id": "1e870f72-b146-46c7-b9b0-58ab6227c7d0",
+		"name": "M3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FilmesController",
+			"item": [
+				{
+					"name": "Filmes_count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/filmes/count?where=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"count"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filmes (id)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/filmes/1",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filme (id)",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"adult\": true,\r\n  \"language\": \"string\",\r\n  \"original_title\": \"string\",\r\n  \"release_date\": \"2022-01-17T00:12:46.143Z\",\r\n  \"runtime\": 0,\r\n  \"genre\": [\r\n    0\r\n  ],\r\n  \"id_lista\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/filmes/2",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filmes (id)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/filmes/10",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filmes (id)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/filmes/30",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"30"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filmes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"adult\": true,\r\n  \"language\": \"en\",\r\n  \"original_title\": \"Ironman\",\r\n  \"release_date\": \"2022-01-17T00:15:24.769Z\",\r\n  \"runtime\": 200,\r\n  \"genre\": [\r\n    3\r\n  ],\r\n  \"id_lista\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/filmes",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filmes",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"adult\": true,\r\n  \"language\": \"string\",\r\n  \"original_title\": \"string\",\r\n  \"release_date\": \"2022-01-17T00:18:12.642Z\",\r\n  \"runtime\": 0,\r\n  \"genre\": [\r\n    0\r\n  ],\r\n  \"id_lista\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/filmes",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filmes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/filmes",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FilmesGeneroController",
+			"item": [
+				{
+					"name": "filmes(id) genero",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"genero\": \"string\",\r\n  \"id_filmes\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/filmes/2/generos",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"2",
+								"generos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filmes(id) genero",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"genero\": \"string\",\r\n  \"id_filmes\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/filmes/1/generos?where=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"1",
+								"generos"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filmes(id) genero",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"id\": 0,\r\n    \"genero\": \"string\",\r\n    \"id_filmes\": 0\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/filmes/1/generos?filter=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"1",
+								"generos"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filmes(id) genero",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/filmes/2/generos",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"2",
+								"generos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FilmesListaFilmes Controller",
+			"item": [
+				{
+					"name": "filmes(id) lista-filmes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"id_filme\": 0,\r\n  \"id_user\": 0,\r\n  \"id_filmes\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/filmes/1/lista-filmes",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"1",
+								"lista-filmes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filmes(id) lista-filmes",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_lista\": 0,\r\n  \"id\": 0,\r\n  \"id_filme\": 0,\r\n  \"id_user\": 0,\r\n  \"id_filmes\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/filmes/1/lista-filmes?where=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"1",
+								"lista-filmes"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filmes(id) lista-filmes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/filmes/1/lista-filmes?filter=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"1",
+								"lista-filmes"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filmes(id) lista-filmes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/filmes/1/lista-filmes?where=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"filmes",
+								"1",
+								"lista-filmes"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GeneroFilmesController",
+			"item": [
+				{
+					"name": "genero(id) filmes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/generos/5/filmes",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"generos",
+								"5",
+								"filmes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ListaFilmeFilmesController",
+			"item": [
+				{
+					"name": "lista-filmes(id) filmes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"adult\": true,\r\n  \"language\": \"string\",\r\n  \"original_title\": \"string\",\r\n  \"release_date\": \"2022-01-17T00:32:58.224Z\",\r\n  \"runtime\": 0,\r\n  \"genre\": [\r\n    0\r\n  ],\r\n  \"id_lista\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/lista-filmes/1/filmes",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"lista-filmes",
+								"1",
+								"filmes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista-filmes(id) filmes",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"adult\": true,\r\n  \"language\": \"string\",\r\n  \"original_title\": \"string\",\r\n  \"release_date\": \"2022-01-17T00:33:41.258Z\",\r\n  \"runtime\": 0,\r\n  \"genre\": [\r\n    0\r\n  ],\r\n  \"id_lista\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/lista-filmes/1/filmes?where=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"lista-filmes",
+								"1",
+								"filmes"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista-filmes(id) filmes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/lista-filmes/1/filmes?filter=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"lista-filmes",
+								"1",
+								"filmes"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista-filmes(id) filmes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/lista-filmes/1/filmes?where=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"lista-filmes",
+								"1",
+								"filmes"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ListaFilmeUserController",
+			"item": [
+				{
+					"name": "lista-filmes(id) user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"first_name\": \"string\",\r\n  \"last_name\": \"string\",\r\n  \"mail\": \"string\",\r\n  \"favoritos\": [\r\n    0\r\n  ],\r\n  \"id_lista\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/lista-filmes/1/user",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"lista-filmes",
+								"1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista-filmes(id) user",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"first_name\": \"string\",\r\n  \"last_name\": \"string\",\r\n  \"mail\": \"string\",\r\n  \"favoritos\": [\r\n    0\r\n  ],\r\n  \"id_lista\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/lista-filmes/1/user?where=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"lista-filmes",
+								"1",
+								"user"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista-filmes(id) user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/lista-filmes/2/user?filter=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"lista-filmes",
+								"2",
+								"user"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista-filmes(id) user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/lista-filmes/1/user?where=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"lista-filmes",
+								"1",
+								"user"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PingController",
+			"item": [
+				{
+					"name": "ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/ping",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"ping"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserController",
+			"item": [
+				{
+					"name": "user-count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/users/count?where=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"count"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user(id)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"first_name\": \"string\",\r\n  \"last_name\": \"string\",\r\n  \"mail\": \"string\",\r\n  \"favoritos\": [\r\n    0\r\n  ],\r\n  \"id_lista\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/users/1",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user(id)",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"first_name\": \"string\",\r\n  \"last_name\": \"string\",\r\n  \"mail\": \"string\",\r\n  \"favoritos\": [\r\n    0\r\n  ],\r\n  \"id_lista\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/users/3",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user(id)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"offset\": 0,\r\n  \"limit\": 100,\r\n  \"skip\": 0,\r\n  \"order\": \"string\",\r\n  \"fields\": {\r\n    \"id\": true,\r\n    \"first_name\": true,\r\n    \"last_name\": true,\r\n    \"mail\": true,\r\n    \"favoritos\": true,\r\n    \"id_lista\": true\r\n  },\r\n  \"include\": [\r\n    {\r\n      \"relation\": \"string\",\r\n      \"scope\": {\r\n        \"offset\": 0,\r\n        \"limit\": 100,\r\n        \"skip\": 0,\r\n        \"order\": \"string\",\r\n        \"where\": {\r\n          \"additionalProp1\": {}\r\n        },\r\n        \"fields\": {},\r\n        \"include\": [\r\n          {\r\n            \"additionalProp1\": {}\r\n          }\r\n        ]\r\n      }\r\n    },\r\n    \"string\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/users/2",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user(id)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/users/1",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"first_name\": \"string\",\r\n  \"last_name\": \"string\",\r\n  \"mail\": \"string\",\r\n  \"favoritos\": [\r\n    0\r\n  ],\r\n  \"id_lista\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/users",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"first_name\": \"string\",\r\n  \"last_name\": \"string\",\r\n  \"mail\": \"string\",\r\n  \"favoritos\": [\r\n    0\r\n  ],\r\n  \"id_lista\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/users?where=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"offset\": 0,\r\n  \"limit\": 100,\r\n  \"skip\": 0,\r\n  \"order\": \"string\",\r\n  \"where\": {\r\n    \"additionalProp1\": {}\r\n  },\r\n  \"fields\": {\r\n    \"id\": true,\r\n    \"first_name\": true,\r\n    \"last_name\": true,\r\n    \"mail\": true,\r\n    \"favoritos\": true,\r\n    \"id_lista\": true\r\n  },\r\n  \"include\": [\r\n    {\r\n      \"relation\": \"string\",\r\n      \"scope\": {\r\n        \"offset\": 0,\r\n        \"limit\": 100,\r\n        \"skip\": 0,\r\n        \"order\": \"string\",\r\n        \"where\": {\r\n          \"additionalProp1\": {}\r\n        },\r\n        \"fields\": {},\r\n        \"include\": [\r\n          {\r\n            \"additionalProp1\": {}\r\n          }\r\n        ]\r\n      }\r\n    },\r\n    \"string\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/users",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserListaFilmeController",
+			"item": [
+				{
+					"name": "users(id) lista-filme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"id_filme\": 0,\r\n  \"id_user\": 0,\r\n  \"id_filmes\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/users/1/lista-filme",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1",
+								"lista-filme"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users(id) lista-filme",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_lista\": 0,\r\n  \"id\": 0,\r\n  \"id_filme\": 0,\r\n  \"id_user\": 0,\r\n  \"id_filmes\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/users/1/lista-filme?where=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1",
+								"lista-filme"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users(id) lista-filme",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/users/1/lista-filme?filter=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1",
+								"lista-filme"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users(id) lista-filme",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://[::1]:3000/users/1/lista-filme?where=%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1",
+								"lista-filme"
+							],
+							"query": [
+								{
+									"key": "where",
+									"value": "%7B%0A%20%20%22additionalProp1%22%3A%20%7B%7D%0A%7D"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

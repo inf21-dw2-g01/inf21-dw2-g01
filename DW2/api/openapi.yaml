@@ -1,0 +1,495 @@
+openapi: 3.0.0
+info:
+  title: Filmes
+  description: M2 - Filmes
+  contact:
+    name: my student id
+    email: my.student.email@intitution.country
+  version: 0.0.1
+servers:
+- url: http://localhost:8080
+  description: My localhost
+  variables:
+    basePath:
+      default: /
+paths:
+  /Filmes:
+    get:
+      tags:
+      - FilmesController
+      summary: Retrieve Filmes
+      operationId: retrieveFilmes
+      responses:
+        "200":
+          description: Array of Filmes model instances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Filmes'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+      x-swagger-router-controller: FilmesController
+  /Filmes/{id}:
+    get:
+      tags:
+      - FilmesController
+      summary: Retrieve Filmes
+      operationId: retrieveFilme
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Retrieve Filmes id 1
+            value: 1
+          two:
+            summary: Retrieve Filmes id 2
+            value: 2
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Filmes'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Filmes'
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: FilmesController
+  /Genero:
+    get:
+      tags:
+      - GeneroController
+      summary: Retrieve Genero
+      operationId: retrieveGeneros
+      responses:
+        "200":
+          description: Array of Genero model instances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Genero'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+      x-swagger-router-controller: GeneroController
+  /Genero/{id}:
+    get:
+      tags:
+      - GeneroController
+      summary: Retrieve Genero
+      operationId: retrieveGenero
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Retrieve genero id 1
+            value: 1
+          two:
+            summary: Retrieve genero id 2
+            value: 2
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Genero'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Genero'
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: GeneroController
+  /User:
+    get:
+      tags:
+      - UserController
+      summary: Retrieve User
+      operationId: retrieveUsers
+      responses:
+        "200":
+          description: Array of user model instances
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+                x-content-type: application/json
+            application/xml:
+              schema:
+                type: array
+                items:  
+                  $ref: '#/components/schemas/inline_response_200_1'
+                x-content-type: application/xml
+      x-swagger-router-controller: UserController
+  /User/{id}:
+    get:
+      tags:
+      - UserController
+      summary: Retrieve User
+      operationId: retrieveUser
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/User'
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: UserController
+      
+  /Favoritos/{fav}:
+    get:
+      tags:
+      - FavoritosController
+      summary: Retrieve Favoritos
+      operationId: retrieveFavoritos
+      parameters:
+      - name: fav
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Retrieve Favoritos id 1
+            value: 1
+          two:
+            summary: Retrieve Favoritos id 2
+            value: 2
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/User'
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: UserController
+  /Favoritos/{fav}{id_filme}: 
+    post:
+      tags:
+      - FavoritosController
+      summary: Update Favoritos
+      operationId: updateFavoritos
+      parameters:
+      - name: fav
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+      - name: id_filme
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Update Filmes id 1
+            value: 1
+          two:
+            summary: Update Filmes id 2
+            value: 2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Favoritos'
+            examples:
+              FilmeExample01:
+                $ref: '#/components/examples/FilmesExample01'
+              FilmeExample02:
+                $ref: '#/components/examples/FilmesExample02'
+        required: true
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                description: Filmes PUT success
+                x-content-type: application/json
+        "400":
+          description: Bad request
+        "404":
+          description: id not found
+      x-swagger-router-controller: UserController
+    delete:
+      tags:
+      - FavoritosController
+      summary: Delete Favoritos
+      operationId: deleteFavoritos
+      parameters:
+      - name: fav
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Delete Filmes id 1
+            value: 1
+          two:
+            summary: Delete Filmes id 2
+            value: 2
+      - name: id_filme
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          minimum: 1
+          type: integer
+          format: int64
+        examples:
+          one:
+            summary: Delete Filmes id 1
+            value: 1
+          two:
+            summary: Delete Filmes id 2
+            value: 2
+      responses:
+        "200":
+            description: Success
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/Favoritos'
+              application/xml:
+                schema:
+                  $ref: '#/components/schemas/Favoritos'
+        "204":
+          description: No Content
+        "404":
+          description: id not found
+      x-swagger-router-controller: UserController
+      
+  
+components:
+  schemas:
+    Filmes:
+      title: Filmes
+      required:
+      - id
+      - title
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        title:
+          type: string
+        release_date:
+          type: string
+          format: time
+        runtime:
+          type: integer
+        original_title:
+          type: string
+        language:
+          type: string
+        genre:
+          type: array
+          items:
+            $ref: '#/components/schemas/Genero'
+        adult:
+          type: boolean
+      additionalProperties: false
+      example:
+        original_title: original_title
+        release_date: release_date
+        genre: genre
+        runtime: 6
+        language: language
+        id: 0
+        title: title
+        adult: adult
+    User:
+      title: User
+      required:
+      - first_name
+      - id
+      - last_name
+      - mail
+      - favoritos
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        first_name:
+          type: string
+        last_name:
+          type: string
+        mail:
+          type: string
+        favoritos:
+          type: array
+          items:
+            $ref: '#/components/schemas/Favoritos'  
+      additionalProperties: false
+      example:
+        mail: mail
+        last_name: last_name
+        id: 0
+        first_name: first_name
+    inline_response_200:
+      type: object
+      properties:
+        User:
+          type: array
+          items:
+            $ref: '#/components/schemas/User'
+      xml:
+        name: User
+    inline_response_200_1:
+      type: object
+      properties:
+        User:
+          type: array
+          items:
+            $ref: '#/components/schemas/User'
+      xml:
+        name: User
+    Genero:
+      title: Genero
+      required: 
+      - id
+      - genero
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        genero:
+          type: string
+      additionalProperties: false
+      example:
+        id: 0
+        genero: genero
+    Favoritos:
+      title: Favoritos
+      required:
+      - id
+      - title
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        title:
+          type: string
+        release_date:
+          type: string
+          format: time
+        runtime:
+          type: integer
+        original_title:
+          type: string
+        language:
+          type: string
+        genre:
+          type: array
+          items:
+            $ref: '#/components/schemas/Genero'
+        adult:
+          type: boolean
+      additionalProperties: false
+      example:
+        original_title: original_title
+        release_date: release_date
+        genre: genre
+        runtime: 6
+        language: language
+        id: 0
+        title: title
+        adult: adult
+  examples:
+    FilmesExample01:
+      value:
+        id: 1
+        title: Spider-Man_No Way Home
+        release_date: 2021-12-15
+        runtime: 148
+        original_title: Spider-Man_No Way Home
+        language: en
+        genre: "action, adventure, science fiction"
+        adult: false
+    FilmesExample02:
+      value:
+        id: 2
+        title: Don't Look Up
+        release_date: 2021-12-07
+        runtime: 138
+        original_title: Don't Look Up
+        language: en
+        genre: "comedy, drama, science fiction"
+        adult: false
