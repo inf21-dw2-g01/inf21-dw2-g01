@@ -6,7 +6,7 @@ services:
     command: sh -c "npm start"
     ports:
       - 3000:3000
-    working_dir: /nodejs-server-server-generated_8 Repetir/lb4-filmes
+    working_dir: /lb4-filmes
     volumes:
       - ./:/M3-mysql-data
     environment:
