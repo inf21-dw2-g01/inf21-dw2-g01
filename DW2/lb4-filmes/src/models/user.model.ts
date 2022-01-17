@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasOne} from '@loopback/repository';
+import {ListaFilmes} from './lista-filmes.model';
 
 @model()
 export class User extends Entity {
@@ -35,6 +36,13 @@ export class User extends Entity {
   })
   favoritos: number[];
 
+  @hasOne(() => ListaFilmes)
+  user_lista: ListaFilmes;
+
+  @property({
+    type: 'number',
+  })
+  listaFilmesId?: number;
 
   constructor(data?: Partial<User>) {
     super(data);

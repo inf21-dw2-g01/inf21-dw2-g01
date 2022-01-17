@@ -15,13 +15,13 @@ CREATE TABLE `Filmes`(
 
 
 CREATE TABLE `genero`(
-    `id` bigint NOT NULL,
     `id` bigint NOT NULL AUTO_INCREMENT,
     `genero` nvarchar(50) NOT NULL,
     PRIMARY KEY (`id`)
 )ENGINE=InnoDB;
 
 CREATE TABLE `genero_filme`(
+    `id` bigint NOT NULL,
     `id_filme` int NOT NULL,
     `id_genero` int NOT NULL,
 )ENGINE=InnoDB;

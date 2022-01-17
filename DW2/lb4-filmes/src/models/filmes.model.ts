@@ -1,4 +1,6 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany} from '@loopback/repository';
+import {Genero} from './genero.model';
+import {ListaFilmes} from './lista-filmes.model';
 
 @model()
 export class Filmes extends Entity {
@@ -47,6 +49,21 @@ export class Filmes extends Entity {
   })
   genre: number[];
 
+  @hasMany(() => Genero)
+  genero_Filmes: Genero[];
+
+  @property({
+    type: 'number',
+  })
+  generoId?: number;
+
+  @hasMany(() => ListaFilmes)
+  filmes_listas: ListaFilmes[];
+
+  @property({
+    type: 'number',
+  })
+  listaFilmesId?: number;
 
   constructor(data?: Partial<Filmes>) {
     super(data);
