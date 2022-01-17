@@ -15,9 +15,9 @@ _O repositório está organizado da seguite maneira:_
 
 ## Galeria ------------------------- VER !!
 
-![Recursos1](doc/images/image4.png)
-![Recursos2](doc/images/image4.png)
-![Recursos3](doc/images/image4.png)
+![Recursos1](doc/images/image11.png)
+![Recursos2](doc/images/image12.png)
+![Recursos3](doc/images/image13.png)
 
 ## Tecnologias 
 
