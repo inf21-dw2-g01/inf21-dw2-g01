@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  app:
+    image: node:latest
+    command: sh -c "npm start"
+    ports:
+      - 3000:3000
+    working_dir: /nodejs-server-server-generated_8 Repetir/lb4-filmes
+    volumes:
+      - ./:/M3-mysql-data
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: mlp1234
+      MYSQL_DB: filmes
+
+  mysql:
+    image: mysql:latest
+    volumes:
+      - M3-mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: mlp1234
+      MYSQL_DATABASE: filmes
+
+volumes:
+  M3-mysql-data:

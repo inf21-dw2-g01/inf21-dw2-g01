@@ -65,7 +65,7 @@ export class FilmesController {
       'application/json': {
         schema: {
           type: 'array',
-          items: getModelSchemaRef(Filmes, {includeRelations: true}),
+          items: getModelSchemaRef(Filmes, {includeRelations: false}),
         },
       },
     },
