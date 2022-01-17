@@ -29,6 +29,7 @@ _As tecnologias usadas neste projeto, foram as seguites:_
 * Docker
 * Yaml
 * MySQL
+* CSS
 
 
 ### Frameworks e Livrarias 
