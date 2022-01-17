@@ -23,9 +23,9 @@ _O repositório está organizado da seguite maneira:_
 
 _As tecnologias usadas neste projeto, foram as seguites:_
 * Javascript
-* nodeJS
-* MySQL
-* Yaml
+* HTML
+* TypeScript
+* Shell
 * Docker
 
 
@@ -33,6 +33,8 @@ _As tecnologias usadas neste projeto, foram as seguites:_
 
 * Docker
 * NodeJS
+* Loopback4
+* React-Admin
 
 ## Relatório
 _Estão adicionados um documento por capítulo_
