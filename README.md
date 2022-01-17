@@ -27,6 +27,8 @@ _As tecnologias usadas neste projeto, foram as seguites:_
 * TypeScript
 * Shell
 * Docker
+* Yaml
+* MySQL
 
 
 ### Frameworks e Livrarias 
