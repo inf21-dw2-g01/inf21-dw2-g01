@@ -13,7 +13,7 @@ _O repositório está organizado da seguite maneira:_
 * Capítulos do relatório estão no [doc folder](doc/).
 
 
-## Galeria ------------------------- VER !!
+## Galeria 
 
 ![Recursos1](doc/images/image11.png)
 ![Recursos2](doc/images/image12.png)
