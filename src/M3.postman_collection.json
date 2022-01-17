@@ -465,7 +465,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://[::1]:3000/generos/5/filmes",
+							"raw": "http://[::1]:3000/generos/3/filmes",
 							"protocol": "http",
 							"host": [
 								"[::1]"
@@ -473,7 +473,67 @@
 							"port": "3000",
 							"path": [
 								"generos",
-								"5",
+								"3",
+								"filmes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"adult\": true,\r\n  \"language\": \"string\",\r\n  \"original_title\": \"string\",\r\n  \"release_date\": \"2022-01-17T20:49:57.452Z\",\r\n  \"runtime\": 0,\r\n  \"genre\": [\r\n    0\r\n  ],\r\n  \"generoId\": 0,\r\n  \"listaFilmesId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/generos/4/filmes",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"generos",
+								"4",
+								"filmes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"adult\": true,\r\n  \"language\": \"string\",\r\n  \"original_title\": \"string\",\r\n  \"release_date\": \"2022-01-17T20:50:46.632Z\",\r\n  \"runtime\": 0,\r\n  \"genre\": [\r\n    0\r\n  ],\r\n  \"generoId\": 0,\r\n  \"listaFilmesId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://[::1]:3000/generos/2/filmes",
+							"protocol": "http",
+							"host": [
+								"[::1]"
+							],
+							"port": "3000",
+							"path": [
+								"generos",
+								"2",
 								"filmes"
 							]
 						}
